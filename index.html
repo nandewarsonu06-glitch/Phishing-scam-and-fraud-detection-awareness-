@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberSafe | Phishing & Fraud Awareness</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="shield">🛡️</span> Cyber<span>Safe</span></div>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#learn">Learn</a><a href="#detect">Spot the Scam</a>
+    <a href="#safety">Safety</a><a href="#quiz">Quiz</a><a href="#survey">Survey</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">B.Sc. IT • Community Engagement Project</p>
+    <h1>Pause.<br><span>Verify.</span><br>Protect.</h1>
+    <p class="lead">A simple digital awareness platform to help communities recognize phishing, scams and online fraud before they cause harm.</p>
+    <div class="actions"><a class="btn primary" href="#detect">Try Scam Detector</a><a class="btn ghost" href="#quiz">Take the Quiz</a></div>
+  </div>
+  <div class="hero-card">
+    <div class="pulse">● LIVE AWARENESS CHECK</div>
+    <h3>Before you click…</h3>
+    <div class="check">✓ Is the sender genuine?</div>
+    <div class="check">✓ Is the request unexpected?</div>
+    <div class="check">✓ Am I being pressured?</div>
+    <div class="check">✓ Can I verify independently?</div>
+    <div class="warning">⚠ Never share OTP, UPI PIN, CVV or passwords.</div>
+  </div>
+</section>
+
+<section class="stats">
+  <div><b>01</b><span>Learn the signs</span></div><div><b>02</b><span>Verify independently</span></div>
+  <div><b>03</b><span>Protect accounts</span></div><div><b>04</b><span>Report suspicious activity</span></div>
+</section>
+
+<section id="learn" class="section">
+  <div class="section-head"><p class="eyebrow">01 • KNOW THE THREATS</p><h2>What is phishing & fraud?</h2><p>Attackers often use trust, urgency and impersonation to make people take unsafe actions.</p></div>
+  <div class="cards">
+    <article class="card"><div class="icon">🎣</div><h3>Phishing</h3><p>Fake messages or websites that imitate trusted entities to steal information.</p></article>
+    <article class="card"><div class="icon">💬</div><h3>Smishing</h3><p>Phishing delivered through SMS or messaging platforms.</p></article>
+    <article class="card"><div class="icon">📞</div><h3>Vishing</h3><p>Fraudulent calls using impersonation, pressure or fear.</p></article>
+    <article class="card"><div class="icon">🧠</div><h3>Social Engineering</h3><p>Manipulating people into revealing information or taking an unsafe action.</p></article>
+    <article class="card"><div class="icon">💳</div><h3>Financial Fraud</h3><p>Deceptive or unauthorized activity intended to cause monetary loss.</p></article>
+    <article class="card"><div class="icon">🔑</div><h3>Account Theft</h3><p>Credentials or personal details are obtained to access or misuse an account.</p></article>
+  </div>
+</section>
+
+<section id="detect" class="section dark">
+  <div class="section-head"><p class="eyebrow">02 • INTERACTIVE ACTIVITY</p><h2>Spot the Scam</h2><p>Read the sample message and select the red flags you can find.</p></div>
+  <div class="detector">
+    <div class="message">
+      <div class="msg-top"><span>Bank Alert</span><small>Today, 10:42 AM</small></div>
+      <p><b>URGENT:</b> Your KYC expires today. Your account will be blocked. Click the link below immediately and enter your OTP to complete verification.</p>
+      <div class="fake-link">secure-bank-verify.example.com</div>
+    </div>
+    <div class="redflags">
+      <label><input type="checkbox" value="urgency"> Urgency / threat</label>
+      <label><input type="checkbox" value="link"> Suspicious link</label>
+      <label><input type="checkbox" value="otp"> Request for OTP</label>
+      <label><input type="checkbox" value="impersonation"> Impersonation</label>
+      <button class="btn primary" onclick="checkScam()">Check My Answer</button>
+      <div id="detectorResult" class="result"></div>
+    </div>
+  </div>
+</section>
+
+<section id="safety" class="section">
+  <div class="section-head"><p class="eyebrow">03 • PROTECT YOURSELF</p><h2>Your safety checklist</h2></div>
+  <div class="steps">
+    <div class="step"><b>STOP</b><span>Don't click, pay, download or reply immediately.</span></div>
+    <div class="step"><b>CHECK</b><span>Inspect the sender, number, domain and context.</span></div>
+    <div class="step"><b>VERIFY</b><span>Use the official app, website or trusted contact independently.</span></div>
+    <div class="step"><b>PROTECT</b><span>Use strong unique passwords and multi-factor authentication.</span></div>
+    <div class="step"><b>REPORT</b><span>Preserve evidence and use official reporting channels when needed.</span></div>
+  </div>
+  <div class="notice-grid">
+    <div class="notice red"><b>Never share</b><p>OTP • UPI PIN • CVV • Password • Recovery code • Remote-access code</p></div>
+    <div class="notice green"><b>Always verify</b><p>Recipient name • Amount • Website domain • Sender identity • Unexpected requests</p></div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="section-head"><p class="eyebrow">04 • COMMON SCENARIOS</p><h2>Could this happen to you?</h2></div>
+  <div class="scenario-grid">
+    <button onclick="showScenario('delivery')">📦 Fake delivery/refund</button>
+    <button onclick="showScenario('job')">💼 Fake job offer</button>
+    <button onclick="showScenario('upi')">💸 UPI/payment scam</button>
+    <button onclick="showScenario('support')">🖥️ Tech-support scam</button>
+    <button onclick="showScenario('social')">👤 Social-media impersonation</button>
+    <button onclick="showScenario('qr')">🔳 QR-code scam</button>
+  </div>
+  <div id="scenarioBox" class="scenario-box">Choose a scenario above to see the warning signs.</div>
+</section>
+
+<section id="quiz" class="section">
+  <div class="section-head"><p class="eyebrow">05 • TEST YOUR KNOWLEDGE</p><h2>CyberSafe Quiz</h2><p>Answer all 8 questions and see your awareness score.</p></div>
+  <div id="quizBox" class="quiz"></div>
+  <button class="btn primary" onclick="submitQuiz()">Submit Quiz</button>
+  <div id="quizResult" class="result"></div>
+</section>
+
+<section id="survey" class="section dark">
+  <div class="section-head"><p class="eyebrow">06 • CEP COMMUNITY FEEDBACK</p><h2>Awareness Survey</h2><p>Use this after your community interaction to record participant feedback.</p></div>
+  <form id="surveyForm" class="survey" onsubmit="saveSurvey(event)">
+    <label>Name (optional)<input id="sname" placeholder="Participant name"></label>
+    <label>Before this session, how confident were you at identifying scams?
+      <select id="before" required><option value="">Select</option><option>Very confident</option><option>Confident</option><option>Somewhat confident</option><option>Not confident</option></select>
+    </label>
+    <label>After this session, how confident are you?
+      <select id="after" required><option value="">Select</option><option>Very confident</option><option>Confident</option><option>Somewhat confident</option><option>Not confident</option></select>
+    </label>
+    <label>Which topic was most useful?
+      <select id="topic" required><option value="">Select</option><option>Phishing</option><option>UPI/payment safety</option><option>Password & MFA</option><option>Spot the Scam activity</option><option>Reporting fraud</option></select>
+    </label>
+    <label>Feedback<textarea id="feedback" rows="4" placeholder="What did you learn?"></textarea></label>
+    <button class="btn primary" type="submit">Save Feedback</button>
+  </form>
+  <div id="surveySaved" class="result"></div>
+</section>
+
+<section class="section emergency">
+  <div><p class="eyebrow">IF FRAUD HAPPENS</p><h2>Act quickly. Don't panic.</h2><p>Stop further communication or payments, preserve screenshots and transaction details, contact the relevant financial service through official channels, secure compromised accounts, and use appropriate official cyber-fraud reporting channels.</p></div>
+  <div class="emergency-card"><b>Evidence checklist</b><span>📸 Screenshots</span><span>🧾 Transaction details</span><span>📱 Numbers / emails</span><span>🔗 URLs</span><span>🕒 Date & time</span></div>
+</section>
+</main>
+
+<footer><div class="brand">🛡️ Cyber<span>Safe</span></div><p>Phishing, Scam & Fraud Detection Awareness Program • B.Sc. IT Community Engagement Project</p><p class="small">Educational prototype. Use official financial institution and government reporting channels for real incidents.</p></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
